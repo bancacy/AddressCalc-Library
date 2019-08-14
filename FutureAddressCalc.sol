@@ -19,6 +19,9 @@ library AddressCalc {
 
         if(_nonce <= 0xffffff) return address(uint160(uint256((keccak256(abi.encodePacked(byte(0xd9),
          byte(0x94), _origin, byte(0x83), uint24(_nonce)))))));
+         
+        return address(uint160(uint256((keccak256(abi.encodePacked(byte(0xda), byte(0x94), _origin, byte(0x84), uint32(_nonce)))))));
+
     }
 
 }
